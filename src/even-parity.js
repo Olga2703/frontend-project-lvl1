@@ -1,8 +1,8 @@
 const isEvenNumber = (number) => {
   if (number % 2 === 0) {
-    return true;
+    return 'yes';
   }
-  return false;
+  return 'no';
 };
 
 export default isEvenNumber;
