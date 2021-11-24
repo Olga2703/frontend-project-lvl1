@@ -21,7 +21,7 @@ const newGame = (questionGame, sequenceGame) => {
       console.log('Correct!');
     } else {
       console.log(`'${answer}' is wrong answer ;(. Correct answer was 
-            '${cdr(questionAnswer)}'`);
+            '${cdr(questionAnswer)}'. Let's try again, ${userName}`);
       break;
     }
     if (i === 2) {
