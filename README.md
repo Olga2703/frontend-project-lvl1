@@ -7,3 +7,5 @@
 ![linter](https://github.com/Olga2703/frontend-project-lvl1/actions/workflows/lint-push.yml/badge.svg)
 
 [![asciicast](https://asciinema.org/a/VJxMo3ZFtnRAOxDovSbhEZGh7.svg)](https://asciinema.org/a/VJxMo3ZFtnRAOxDovSbhEZGh7)
+
+[![asciicast](https://asciinema.org/a/SirRUSRuXwvmT5yWXatqnJGCY.svg)](https://asciinema.org/a/SirRUSRuXwvmT5yWXatqnJGCY)
