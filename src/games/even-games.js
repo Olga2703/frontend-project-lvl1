@@ -1,36 +1,21 @@
-import readlineSync from 'readline-sync';
-
-import getUserName from '../cli.js';
+import { cons } from '@hexlet/pairs';
 import isEvenNumber from '../even-parity.js';
-import getRndInteger from '../random-number.js';
+import newGame from '../index.js';
+
+const MAX_NUMBER = 100;
+const MIN_NUMBER = 0;
+
+const questionGame = 'Answer "yes" if the number is even, otherwise answer "no".';
+
+const sequenceGame = () => {
+  const randomNumber = Math.floor(Math.random() * (MAX_NUMBER - MIN_NUMBER + 1)) + MIN_NUMBER;
+  const answer = isEvenNumber(randomNumber);
+  const questionAnswer = cons(randomNumber, answer);
+  return questionAnswer;
+};
 
 const evenGame = () => {
-  console.log('Welcome to the Brain Games!');
-
-  const userName = getUserName();
-  console.log(`Hello ${userName}`);
-
-  console.log('Answer "yes" if the number is even, otherwise answer "no".');
-
-  const COUNT_QUESTIONS = 3;
-  const MAX_NUMBER = 100;
-  const MIN_NUMBER = 0;
-
-  for (let i = 0; i < COUNT_QUESTIONS; i += 1) {
-    const randomNumber = getRndInteger(MIN_NUMBER, MAX_NUMBER);
-    console.log(`Question: ${randomNumber}`);
-    const answer = readlineSync.question('Your answer: ');
-    if (answer === isEvenNumber(randomNumber)) {
-      console.log('Correct!');
-    } else {
-      console.log(`'${answer}' is wrong answer ;(. Correct answer was 
-            '${isEvenNumber(randomNumber)}'`);
-      break;
-    }
-    if (i === 2) {
-      console.log(`Congratulations, ${userName}!`);
-    }
-  }
+  newGame(questionGame, sequenceGame);
 };
 
 export default evenGame;

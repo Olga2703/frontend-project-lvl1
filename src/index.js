@@ -1,7 +1,7 @@
 import readlineSync from 'readline-sync';
 import { car, cdr } from '@hexlet/pairs';
 
-import getUserName from '../src/cli.js';
+import getUserName from './cli.js';
 
 const COUNT_QUESTIONS = 3;
 
