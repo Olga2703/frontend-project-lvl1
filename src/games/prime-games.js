@@ -1,9 +1,21 @@
 import { cons } from '@hexlet/pairs';
 import newGame from '../index.js';
-import isPrime from '../isPrime.js';
 
 const MAX_NUMBER = 100;
 const MIN_NUMBER = 0;
+
+const isPrime = (num) => {
+  let i = 2;
+  let j = 0;
+  while (i * i <= num && j !== 1) {
+    if (num % i === 0) {
+      j = 1;
+    } else {
+      i += 1;
+    }
+  }
+  return j === 1 ? 'no' : 'yes';
+};
 
 const questionGame = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
