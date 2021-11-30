@@ -1,7 +1,7 @@
 const isPrime = (num) => {
   let i = 2;
   let j = 0;
-  if (i * i <= num && j !== 1) {
+  while (i * i <= num && j !== 1) {
     if (num % i === 0) {
       j = 1;
     } else {

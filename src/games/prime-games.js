@@ -9,7 +9,7 @@ const questionGame = 'Answer "yes" if given number is prime. Otherwise answer "n
 
 const sequenceGame = () => {
   const number = Math.floor(Math.random() * (MAX_NUMBER - MIN_NUMBER + 1)) + MIN_NUMBER;
-  const question = `Question: ${number}`;
+  const question = `${number}`;
   const answer = isPrime(number);
   const questionAnswer = cons(question, answer);
   return questionAnswer;
