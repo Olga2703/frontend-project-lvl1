@@ -1,5 +1,6 @@
 import { cons } from '@hexlet/pairs';
 import newGame from '../index.js';
+import getRandomNumber from '../random-num.js';
 
 const LENGTH_PROGRESSION = 10;
 const MAX_NUMBER = 100;
@@ -8,7 +9,7 @@ const MAX_STEP = 10;
 const questionGame = 'What number is missing in the progression?';
 
 const sequenceGame = () => {
-  const firstNumber = Math.floor(Math.random() * (MAX_NUMBER - MIN_NUMBER + 1)) + MIN_NUMBER;
+  const firstNumber = getRandomNumber(MIN_NUMBER, MAX_NUMBER);
   const step = Math.floor(Math.random() * MAX_STEP);
 
   const arithmeticProgression = [];
