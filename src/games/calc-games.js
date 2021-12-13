@@ -1,11 +1,20 @@
 import { cons } from '@hexlet/pairs';
 import newGame from '../index.js';
-import calculate from '../calc-exp.js';
 import getRandomNumber from '../random-num.js';
 
 const MAX_NUMBER = 100;
 const MIN_NUMBER = 0;
 const OPERATIONS = ['+', '-', '*'];
+
+const calculate = (firstNum, secondNum, operation) => {
+  if (operation === '+') {
+    return firstNum + secondNum;
+  }
+  if (operation === '-') {
+    return firstNum - secondNum;
+  }
+  return firstNum * secondNum;
+};
 
 const questionGame = 'What is the result of the expression?';
 const sequenceGame = () => {

@@ -15,7 +15,7 @@ const isPrime = (num) => {
       i += 1;
     }
   }
-  return j === 1 ? 'no' : 'yes';
+  return j === 1 || num === 0 ? 'no' : 'yes';
 };
 
 const questionGame = 'Answer "yes" if given number is prime. Otherwise answer "no".';
