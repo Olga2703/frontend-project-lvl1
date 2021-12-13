@@ -5,7 +5,7 @@ import getUserName from './cli.js';
 
 const COUNT_QUESTIONS = 3;
 
-const newGame = (questionGame, sequenceGame) => {
+const startGame = (questionGame, sequenceGame) => {
   console.log('Welcome to the Brain Games!');
 
   const userName = getUserName();
@@ -31,4 +31,4 @@ const newGame = (questionGame, sequenceGame) => {
   }
 };
 
-export default newGame;
+export default startGame;

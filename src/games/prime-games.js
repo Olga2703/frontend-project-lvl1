@@ -1,5 +1,5 @@
 import { cons } from '@hexlet/pairs';
-import newGame from '../index.js';
+import startGame from '../index.js';
 import getRandomNumber from '../random-num.js';
 
 const MAX_NUMBER = 100;
@@ -29,7 +29,7 @@ const sequenceGame = () => {
 };
 
 const primeGame = () => {
-  newGame(questionGame, sequenceGame);
+  startGame(questionGame, sequenceGame);
 };
 
 export default primeGame;

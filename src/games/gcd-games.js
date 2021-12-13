@@ -1,5 +1,5 @@
 import { cons } from '@hexlet/pairs';
-import newGame from '../index.js';
+import startGame from '../index.js';
 import getRandomNumber from '../random-num.js';
 
 const getGcd = (firstNum, secondNum) => {
@@ -30,7 +30,7 @@ const sequenceGame = () => {
 };
 
 const gcdGame = () => {
-  newGame(questionGame, sequenceGame);
+  startGame(questionGame, sequenceGame);
 };
 
 export default gcdGame;
