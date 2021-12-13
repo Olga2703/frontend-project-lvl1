@@ -21,7 +21,7 @@ const sequenceGame = () => {
   const hiddenProgression = [...arithmeticProgression];
   hiddenProgression[randomElement] = '..';
 
-  const question = `Question: ${hiddenProgression.join(' ')}`;
+  const question = `${hiddenProgression.join(' ')}`;
   const answer = arithmeticProgression[randomElement];
   const questionAnswer = cons(question, String(answer));
   return questionAnswer;
