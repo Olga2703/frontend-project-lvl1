@@ -1,7 +1,19 @@
 import { cons } from '@hexlet/pairs';
 import newGame from '../index.js';
-import getGcd from '../gcd-func.js';
 import getRandomNumber from '../random-num.js';
+
+const getGcd = (firstNum, secondNum) => {
+  let first = firstNum;
+  let second = secondNum;
+  while (first !== 0 && second !== 0) {
+    if (first > second) {
+      first %= second;
+    } else {
+      second %= first;
+    }
+  }
+  return first + second;
+};
 
 const questionGame = 'Find the greatest common divisor of given numbers.';
 
